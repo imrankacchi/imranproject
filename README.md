@@ -7,10 +7,10 @@ pull this: microsoft/mssql-server-windows
 
 Create Container for SQLServer
 docker run -d -p 1433:1433 -e sa_password=<SA_PASSWORD> -e ACCEPT_EULA=Y microsoft/mssql-server-windows
-
 docker ps
 
 Get IP
+
 docker inspect --format="{{.NetworkSettings.Networks.nat.IPAddress}}" containerName
 
 Use IP and login with SQL server Management
